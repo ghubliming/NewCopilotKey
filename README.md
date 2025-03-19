@@ -2,67 +2,63 @@
 
 ## Overview
 
-`NewCopilotKey.exe` is a tool that you can customize to perform specific actions when triggered. In the example provided, it brings Chrome into focus and switches to the second tab by sending the `Alt + 2` key combination. This executable can be personalized to suit different applications or tasks based on your needs.
-
-## Personalization Use Case
-
-In this example, the tool is used for **Chrome**, but it can be adapted for other applications or tasks. The main feature is the ability to **trigger a specific key sequence** (such as `Alt + 2` for Chrome) to quickly switch tabs or perform other actions in any active window.
+`NewCopilotKey.exe` is a customizable tool that you can trigger with a personalized shortcut to automate tasks in various applications. In this example, the tool is set up to bring Chrome into focus and switch to the second tab by sending the `Alt + 2` key combination. The tool can be personalized to fit your needs and tasks.
 
 ### Example Use Case: Chrome
-- **Trigger**: A custom keyboard shortcut, such as `Win + Shift + F23` (set through PowerToys).
+- **Trigger**: Press `Win + Shift + F23` (set as the **Copilot key**).
 - **Action**: Brings Chrome into focus and simulates pressing `Alt + 2` to switch to the second tab.
 
 ## Setup Process
 
 ### 1. **Install PowerToys**
 
-To change the shortcut key for running `NewCopilotKey.exe`, use **PowerToys** for remapping:
+To remap the **Copilot key** (`Win + Shift + F23`) for `NewCopilotKey.exe`, follow these steps using **PowerToys**:
 - Download and install **PowerToys** from [GitHub](https://github.com/microsoft/PowerToys).
-- Open **Keyboard Manager** within PowerToys.
-- Remap your preferred shortcut (e.g., `Win + Shift + F23`) to execute `NewCopilotKey.exe`.
+- Open **Keyboard Manager** in PowerToys.
+- Remap `Win + Shift + F23` (or your chosen key combination) to run `NewCopilotKey.exe`.
 
-### 2. **Remap Your Shortcut in PowerToys**
+### 2. **Remap the Copilot Key in PowerToys**
 
-- Open **PowerToys** and navigate to **Keyboard Manager**.
-- Add a new shortcut remap:
-  - **Shortcut**: Choose your preferred key combination (e.g., `Win + Shift + F23`).
-  - **Action**: Set this shortcut to run `NewCopilotKey.exe`.
+- Open **PowerToys** and go to **Keyboard Manager**.
+- Add a new shortcut:
+  - **Shortcut**: Set it to `Win + Shift + F23` (or any custom key combination you prefer).
+  - **Action**: Set this shortcut to execute `NewCopilotKey.exe`.
 
-Now, whenever you press your custom shortcut, the tool will perform the configured task, such as focusing Chrome and sending `Alt + 2`.
+Now, when you press the **Copilot key** (`Win + Shift + F23`), the tool will bring Chrome into focus and perform the desired action (e.g., switch tabs).
 
 ## How to Use `NewCopilotKey.exe`
 
-Once the shortcut is set up:
-- Press your custom keyboard shortcut.
-- `NewCopilotKey.exe` will perform the action, such as bringing Chrome into focus and switching tabs.
+After setting up the shortcut:
+- Press the **Copilot key** (`Win + Shift + F23`).
+- `NewCopilotKey.exe` will run, bringing Chrome into focus and performing actions like switching tabs.
 
 ### Customizing for Other Applications
-You can adapt the EXE to work with other applications by modifying the PowerShell script before packaging it into an EXE. For instance:
-- If you need to switch to a different application or perform a different key action, simply update the script accordingly and repackage it.
+
+You can easily modify the script to work with other applications or key combinations. Update the script and repackage it as an EXE if necessary.
 
 ## Packaging the Script to EXE
 
-If you'd like to convert the PowerShell script (`NewCopilotKey.ps1`) into an EXE for standalone execution, follow these steps:
+If you want to convert the PowerShell script (`NewCopilotKey.ps1`) to an EXE, follow these steps:
 
 1. **Install PS2EXE**:
-   Open PowerShell as Administrator and run:
+   Run the following command in PowerShell:
    ```powershell
    Install-Module ps2exe -Scope CurrentUser
    ```
 
 2. **Convert the Script**:
-   Navigate to the script directory and run:
+   Navigate to your script folder and run:
    ```powershell
    ps2exe .\NewCopilotKey.ps1 .\NewCopilotKey.exe
    ```
 
 3. **Run the EXE**:
-   You can now run `NewCopilotKey.exe` directly, either manually or by using a custom shortcut.
+   Execute `NewCopilotKey.exe` directly, or use a custom shortcut to trigger it.
 
 ## Requirements
 
-- **Windows 10/11** (for PowerToys and the remapping functionality).
-- **PowerToys** (for remapping shortcut keys).
+- **Windows 10/11** (for PowerToys and remapping shortcuts).
+- **PowerToys** (for remapping the **Copilot key**).
 
 ## License
 This project is licensed under the MIT License.
